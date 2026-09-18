@@ -25,7 +25,6 @@ The platform gives command-center operators a single real-time view of crowd den
 
 ## 👥 Team Codepulse
 
-MVPS Institute of Nursing Education, Nashik
 - Shubham Anawade
 - Tanmay Dusane
 - Sarthak Deore
