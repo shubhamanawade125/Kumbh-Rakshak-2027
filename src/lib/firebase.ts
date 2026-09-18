@@ -23,7 +23,7 @@ import {
 import firebaseConfig from '../../firebase-applet-config.json';
 
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = getFirestore(app, (firebaseConfig as any).firestoreDatabaseId);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
