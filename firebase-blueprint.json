@@ -1,0 +1,48 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Authenticated command officer or field operator profile created via Google Authentication",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string" },
+        "badgeNumber": { "type": "string" },
+        "assignedSector": { "type": "string" },
+        "phone": { "type": "string" },
+        "department": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastLogin": { "type": "string" }
+      },
+      "required": ["uid", "displayName", "email"]
+    },
+    "Incident": {
+      "title": "Incident",
+      "description": "Emergency incident and crowd safety intervention logged at Kumbh Mela",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "severity": { "type": "string" },
+        "status": { "type": "string" },
+        "locationName": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "title", "category", "severity", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "UserProfile",
+      "description": "User profiles authenticated via Google OAuth"
+    },
+    "/incidents/{incidentId}": {
+      "schema": "Incident",
+      "description": "Live emergency incidents and timeline dispatch logs"
+    }
+  }
+}

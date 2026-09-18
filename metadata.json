@@ -1,0 +1,6 @@
+{
+  "name": "Kumbh-Rakshak 2027 | AI Crowd Safety & Emergency Command",
+  "description": "AI-powered predictive crowd density, disaster prevention, CPR/AED emergency locator, clinical triage, and missing persons alert network for Kumbh Mela 2027.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
